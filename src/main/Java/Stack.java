@@ -23,6 +23,21 @@ public class Stack<E> extends Vector {
         }
     }
 
+    public int max() {
+        int maxValue;
+        if (isEmpty()) {
+            throw new Error("Stack does not have any elements");
+        } else {
+            maxValue = 0;
+            for (int i = 0; i < size(); i++) {
+                if ((int) get(i) > maxValue) {
+                    maxValue = (int) get(i);
+                }
+            }
+        }
+        return maxValue;
+    }
+
         public static void main (String[]args){
 
             Stack stack = new Stack();
@@ -33,13 +48,17 @@ public class Stack<E> extends Vector {
             stack.add(3, 4);
             stack.add(4, 5);
 
-            test.add(0);
+            stack.push(10);
+            System.out.println(stack);
 
-//            test.add(1, 2);
-//            test.add(2, 3);
+            System.out.println("----------------------");
 
-            test.pop();
-            System.out.println(test);
+            stack.pop();
+            System.out.println(stack);
+
+            System.out.println("----------------------");
+
+            int maxValue = stack.max();
+            System.out.println(maxValue);
         }
-
 }

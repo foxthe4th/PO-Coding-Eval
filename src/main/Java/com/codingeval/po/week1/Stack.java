@@ -1,3 +1,5 @@
+package com.codingeval.po.week1;
+
 import java.util.Vector;
 
 public class Stack<E> extends Vector {
@@ -14,7 +16,7 @@ public class Stack<E> extends Vector {
     public E pop() {
 
         if (isEmpty()) {
-            throw new Error("Stack does not have any elements");
+            throw new Error("com.codingeval.po.week1.Stack does not have any elements");
         } else {
             Object a = get(0);
             remove(0);
@@ -26,7 +28,7 @@ public class Stack<E> extends Vector {
     public int max() {
         int maxValue;
         if (isEmpty()) {
-            throw new Error("Stack does not have any elements");
+            throw new Error("com.codingeval.po.week1.Stack does not have any elements");
         } else {
             maxValue = 0;
             for (int i = 0; i < size(); i++) {

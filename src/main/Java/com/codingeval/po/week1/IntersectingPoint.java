@@ -1,3 +1,7 @@
+package com.codingeval.po.week1;
+
+import org.w3c.dom.NodeList;
+
 import java.util.LinkedList;
 
 public class IntersectingPoint {
@@ -39,6 +43,5 @@ public class IntersectingPoint {
 
         int result = findIntersect(listA,listB);
         System.out.println(result);
-
     }
 }

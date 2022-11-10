@@ -4,6 +4,7 @@ package com.codingeval.po.week3;
 //EX: 171 -> 1 + 7 + 1 = 9 -> 171/9 = 19 -> No remainder, meaning 171 is Harshad
 public class HarshadFunction {
 
+    //Without recursion
     public static boolean isHarshad(int a){
         
         String testA = Integer.toString(a);
@@ -22,12 +23,26 @@ public class HarshadFunction {
         }
     }
 
+    //With recursion
+    public static int sumA(int a){
+
+        if(a/10 > 0){
+
+            return a % 10 + sumA(a / 10);
+
+        } else {
+            return a % 10;
+        }
+    }
+
+    public static boolean isHarshadWithRecursion(int a){
+        return a % sumA(a) == 0;
+    }
+
     public static void main(String[] args) {
 
-        int a = 50;
-
-        boolean harshadTest = isHarshad(a);
-        System.out.println(harshadTest);
+        System.out.println(isHarshad(171));
+        System.out.println(isHarshadWithRecursion(171));
 
         }
     }
